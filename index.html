@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMO AvilaTek · Priorización Q2 2026</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0iIzBlNGQyOCIvPgogIDwhLS0gdGhyZWUgbW91bnRhaW4gcGVha3MgbWF0Y2hpbmcgQXZpbGEgVGVrIHN0eWxlIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iNCwyNiAxMCwxMiAxNiwyMiAyMCwxNiAyOCwyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmFiZjJhIiBzdHJva2Utd2lkdGg9IjIuMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI0LDI2IDEwLDEyIDE2LDIyIiBmaWxsPSIjNmFiZjJhIiBvcGFjaXR5PSIwLjI1Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNiwyMiAyMCwxNiAyOCwyNiIgZmlsbD0iIzZhYmYyYSIgb3BhY2l0eT0iMC4xNSIvPgo8L3N2Zz4K">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white:    #FFFFFF;
+  --bg:       #F7F6F3;
+  --bg2:      #F0EDE8;
+  --surface:  #FFFFFF;
+  --border:   #E4E0D8;
+  --border2:  #C8C4BC;
+  --ink:      #14120E;
+  --ink2:     #3D3930;
+  --muted:    #7C7870;
+  --dim:      #B0ACA4;
+  --accent:   #1A5C3A;
+  --accent2:  #22764A;
+  --accent-bg:#EBF5EF;
+  --accent-mid:#C0DFD0;
+  --blue:     #1E3A8A;
+  --blue-bg:  #EEF2FF;
+  --amber:    #92400E;
+  --amber-bg: #FEF3C7;
+  --rose:     #9F1239;
+  --rose-bg:  #FFF1F2;
+  --r:        10px;
+  --r-sm:     6px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 14px; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+/* ── PAGE SHELL ─────────────────────────────────────────── */
+.page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 36px 80px;
+}
+
+/* ── HEADER ─────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 24px;
+}
+.header-left {}
+.header-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-mid);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin-bottom: 14px;
+}
+.header-pill-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.header-meta {
+  margin-top: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+  font-weight: 300;
+}
+.header-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+.header-date {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.header-company {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+  color: var(--ink2);
+  margin-top: 2px;
+}
+
+/* ── KPI CARDS ──────────────────────────────────────────── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 20px 20px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+}
+.kpi-card.c-green::after  { background: var(--accent); }
+.kpi-card.c-blue::after   { background: var(--blue); }
+.kpi-card.c-amber::after  { background: #D97706; }
+.kpi-card.c-rose::after   { background: #E11D48; }
+
+.kpi-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.kpi-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.65rem;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+.kpi-card.c-green  .kpi-value { color: var(--accent); }
+.kpi-card.c-blue   .kpi-value { color: var(--blue); }
+.kpi-card.c-amber  .kpi-value { color: #92400E; }
+.kpi-card.c-rose   .kpi-value { color: #9F1239; }
+
+.kpi-desc {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.4;
+}
+.kpi-sub {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+.kpi-card.c-green .kpi-sub { background: var(--accent-bg); color: var(--accent); }
+.kpi-card.c-blue  .kpi-sub { background: var(--blue-bg);   color: var(--blue); }
+.kpi-card.c-amber .kpi-sub { background: var(--amber-bg);  color: var(--amber); }
+.kpi-card.c-rose  .kpi-sub { background: var(--rose-bg);   color: var(--rose); }
+
+/* ── TABS ───────────────────────────────────────────────── */
+.tabs-bar {
+  display: flex;
+  gap: 2px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 3px;
+  width: fit-content;
+  margin-bottom: 28px;
+}
+.tab-btn {
+  padding: 8px 20px;
+  border-radius: 7px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  transition: all 0.18s;
+  letter-spacing: 0.01em;
+}
+.tab-btn:hover { color: var(--ink2); }
+.tab-btn.active {
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  font-weight: 600;
+}
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── SECTION LABEL ──────────────────────────────────────── */
+.sec-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 14px;
+}
+.sec-hint {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* ══════════════════════════════════════════
+   TAB 1 · SERVICIOS
+══════════════════════════════════════════ */
+.services-wrap {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* service rows */
+.svc-list { display: flex; flex-direction: column; gap: 4px; }
+
+.svc-row {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  overflow: hidden;
+}
+.svc-row:hover { border-color: var(--border2); }
+.svc-row.open  { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg); }
+
+.svc-row-head {
+  display: grid;
+  grid-template-columns: 30px 1fr 60px;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+}
+
+.svc-rank {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: var(--dim);
+  text-align: center;
+  line-height: 1;
+}
+.svc-row.t5  .svc-rank { color: var(--accent); }
+.svc-row.t10 .svc-rank { color: var(--blue); }
+
+.svc-info { min-width: 0; }
+.svc-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+.svc-row.open .svc-name { color: var(--accent); }
+
+.track {
+  height: 3px;
+  background: var(--bg2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.9s cubic-bezier(0.16,1,0.3,1);
+}
+.svc-row.t5  .fill { background: var(--accent); }
+.svc-row.t10 .fill { background: var(--blue); }
+.svc-row.rest .fill { background: var(--dim); }
+
+.svc-score {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  text-align: right;
+  color: var(--dim);
+}
+.svc-row.t5  .svc-score { color: var(--accent); }
+.svc-row.t10 .svc-score { color: var(--blue); }
+
+/* tier chips */
+.chip {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: 20px;
+  margin-left: 7px;
+  vertical-align: middle;
+}
+.chip-t5  { background: var(--accent-bg); color: var(--accent); }
+.chip-t10 { background: var(--blue-bg);  color: var(--blue); }
+
+/* expanded drivers panel */
+.svc-drivers {
+  display: none;
+  padding: 0 14px 13px;
+  border-top: 1px solid var(--border);
+}
+.svc-row.open .svc-drivers { display: block; }
+
+.drv-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 10px 0 8px;
+}
+.drv-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+.drv-name { font-size: 12px; color: var(--muted); line-height: 1.3; }
+.drv-right { display: flex; align-items: center; gap: 7px; min-width: 90px; }
+.drv-track { flex: 1; height: 3px; background: var(--bg2); border-radius: 2px; overflow: hidden; }
+.drv-fill  { height: 100%; border-radius: 2px; background: var(--accent); opacity: 0.45; }
+.drv-pct   { font-size: 11px; font-family: 'DM Serif Display', serif; color: var(--muted); white-space: nowrap; }
+
+/* ── Right panel ─────────────────────────────────────────── */
+.detail-panel { position: sticky; top: 20px; }
+.detail-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.detail-box-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.detail-box-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); margin-bottom: 4px; }
+.detail-box-title   { font-family: 'DM Serif Display', serif; font-size: 1rem; color: var(--ink); line-height: 1.3; }
+.detail-box-body    { padding: 16px 18px; }
+.detail-empty {
+  font-family: 'DM Serif Display', serif;
+  font-style: italic;
+  font-size: 12.5px;
+  color: var(--dim);
+  text-align: center;
+  padding: 24px 0 8px;
+}
+.conc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+.conc-row:last-child { border-bottom: none; }
+.conc-tier { font-size: 12px; font-weight: 500; color: var(--ink2); }
+.conc-bar  { flex: 1; height: 3px; background: var(--bg2); border-radius: 2px; overflow: hidden; }
+.conc-fill { height: 100%; border-radius: 2px; }
+.conc-pct  { font-family: 'DM Serif Display', serif; font-size: 13px; color: var(--ink); min-width: 38px; text-align: right; }
+
+.sel-service-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: var(--accent);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.sel-service-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.drv-list-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 10px;
+}
+.drv-panel-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.drv-panel-item:last-child { border-bottom: none; }
+.drv-panel-name { font-size: 12px; color: var(--muted); line-height: 1.3; margin-bottom: 4px; }
+.drv-panel-score {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+/* ══════════════════════════════════════════
+   TAB 2 · GRUPOS
+══════════════════════════════════════════ */
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 12px;
+}
+.group-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.group-card:hover  { border-color: var(--border2); }
+.group-card.open   { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-bg); }
+.group-card.faded  { opacity: 0.5; }
+
+.gc-top {
+  padding: 16px 18px 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.gc-icon {
+  width: 38px; height: 38px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.gc-info { flex: 1; min-width: 0; }
+.gc-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.gc-badges { display: flex; align-items: center; gap: 8px; }
+.gc-weight {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+.gc-n { font-size: 11px; color: var(--dim); }
+
+.gc-bar {
+  height: 2px;
+  background: var(--bg2);
+  margin: 0 18px 0;
+  border-radius: 1px;
+  overflow: hidden;
+}
+.gc-bar-fill {
+  height: 100%;
+  border-radius: 1px;
+  transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+  width: 0;
+}
+
+.gc-outcomes {
+  display: none;
+  padding: 12px 18px 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+}
+.group-card.open .gc-outcomes { display: block; }
+.gc-outcomes-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 10px;
+}
+.oc-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.oc-row:last-child { border-bottom: none; }
+.oc-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 12px;
+  color: var(--dim);
+  width: 16px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.oc-name { font-size: 12px; color: var(--muted); flex: 1; line-height: 1.35; }
+.oc-score {
+  font-family: 'DM Serif Display', serif;
+  font-size: 12px;
+  color: var(--ink2);
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════
+   TAB 3 · OUTCOMES  (bottom → top)
+══════════════════════════════════════════ */
+.outcomes-wrap {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: end; /* align to bottom so the list "grows up" */
+}
+
+.outcomes-col {
+  display: flex;
+  flex-direction: column; /* rank 1 at top */
+  gap: 3px;
+}
+
+.oc-card {
+  display: grid;
+  grid-template-columns: 28px 1fr 56px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  transition: border-color 0.15s;
+}
+.oc-card:hover { border-color: var(--border2); }
+.oc-card.hi { border-left: 3px solid var(--accent); }
+.oc-card.md { border-left: 3px solid var(--blue); }
+.oc-card.lo { border-left: 3px solid var(--border2); opacity: 0.65; }
+
+.oc-card-rank {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: var(--dim);
+  text-align: center;
+  line-height: 1;
+}
+.oc-card.hi .oc-card-rank { color: var(--accent); }
+.oc-card.md .oc-card-rank { color: var(--blue); }
+
+.oc-info { min-width: 0; }
+
+.oc-card-name {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.oc-card.hi .oc-card-name { color: var(--ink); font-weight: 500; }
+
+.oc-score-val {
+  font-family: 'DM Serif Display', serif;
+  font-size: 13px;
+  color: var(--dim);
+  text-align: right;
+  line-height: 1;
+  white-space: nowrap;
+}
+.oc-card.hi .oc-score-val { color: var(--accent); }
+.oc-card.md .oc-score-val { color: var(--blue); }
+
+/* outcomes sidebar */
+.outcomes-aside {
+  position: sticky;
+  bottom: 0;
+  padding-bottom: 4px;
+}
+
+.axis-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  white-space: nowrap;
+}
+
+.aside-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 18px;
+  margin-bottom: 12px;
+}
+.aside-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 12px;
+}
+.aside-stat {
+  margin-bottom: 10px;
+}
+.aside-stat-val {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.aside-stat-label {
+  font-size: 11.5px;
+  color: var(--muted);
+  font-weight: 300;
+}
+.aside-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 12px 0;
+}
+
+.reading-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+.rg-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.rg-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+/* ── animations ─────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade { animation: fadeUp 0.4s ease both; }
+
+/* stagger for lists */
+.svc-list .svc-row:nth-child(1)  { animation-delay: .03s; }
+.svc-list .svc-row:nth-child(2)  { animation-delay: .06s; }
+.svc-list .svc-row:nth-child(3)  { animation-delay: .09s; }
+.svc-list .svc-row:nth-child(4)  { animation-delay: .12s; }
+.svc-list .svc-row:nth-child(5)  { animation-delay: .15s; }
+.svc-list .svc-row:nth-child(6)  { animation-delay: .17s; }
+.svc-list .svc-row:nth-child(n+7){ animation-delay: .19s; }
+
+.groups-grid .group-card:nth-child(1) { animation-delay: .04s; }
+.groups-grid .group-card:nth-child(2) { animation-delay: .08s; }
+.groups-grid .group-card:nth-child(3) { animation-delay: .12s; }
+.groups-grid .group-card:nth-child(4) { animation-delay: .16s; }
+.groups-grid .group-card:nth-child(n+5){ animation-delay: .20s; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-pill"><div class="header-pill-dot"></div>PMO · Evaluación Q2 2026</div>
+      <h1>Portafolio de Servicios<br><em>Priorización Q2 2026</em></h1>
+      <p class="header-meta">25 clientes · 8 grupos · 30 resultados esperados · 26 servicios evaluados</p>
+    </div>
+    <div class="header-right">
+      <div class="header-date">13 de mayo, 2026</div>
+      <div class="header-company">AvilaTek PMO</div>
+    </div>
+  </header>
+
+  <!-- KPI CARDS -->
+  <div class="kpi-grid">
+
+    <div class="kpi-card c-green fade">
+      <div class="kpi-label">Resultado más esperado</div>
+      <div class="kpi-value">8.8%</div>
+      <div class="kpi-desc">Pronóstico de proyectos más preciso</div>
+      <div class="kpi-sub">#1 de 30 outcomes</div>
+    </div>
+
+    <div class="kpi-card c-blue fade" style="animation-delay:.05s">
+      <div class="kpi-label">Valor Top 5 combinado</div>
+      <div class="kpi-value">30.9%</div>
+      <div class="kpi-desc">Los 5 servicios prioritarios concentran casi un tercio del valor total demandado</div>
+      <div class="kpi-sub">5 de 26 servicios</div>
+    </div>
+
+    <div class="kpi-card c-amber fade" style="animation-delay:.10s">
+      <div class="kpi-label">Grupos más influyentes</div>
+      <div class="kpi-value">60%</div>
+      <div class="kpi-desc">Gerentes + C-level concentran 3 de cada 5 puntos del modelo</div>
+      <div class="kpi-sub">30% + 30% de peso</div>
+    </div>
+
+    <div class="kpi-card c-rose fade" style="animation-delay:.15s">
+      <div class="kpi-label">Servicio a madurar primero</div>
+      <div class="kpi-value">7.1%</div>
+      <div class="kpi-desc">Gestión de metodologías y marcos de trabajo</div>
+      <div class="kpi-sub">#1 de 26 servicios</div>
+    </div>
+
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-bar">
+    <button class="tab-btn active" data-tab="services">Servicios PMO</button>
+    <button class="tab-btn" data-tab="groups">Por Grupo de Clientes</button>
+    <button class="tab-btn" data-tab="outcomes">Resultados Esperados</button>
+  </div>
+
+  <!-- ══ TAB 1: SERVICIOS ══ -->
+  <div class="tab-panel active" id="panel-services">
+    <p class="sec-hint">Selecciona un servicio para ver qué resultados esperados lo impulsan.</p>
+    <div class="services-wrap">
+
+      <div class="svc-list" id="svc-list"></div>
+
+      <div class="detail-panel">
+        <div class="detail-box">
+          <div class="detail-box-head">
+            <div class="detail-box-eyebrow">Concentración de valor</div>
+            <div class="detail-box-title">Distribución por tier</div>
+          </div>
+          <div class="detail-box-body" id="detail-body">
+            <div id="conc-rows"></div>
+            <div style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border)">
+              <p class="detail-empty">Selecciona un servicio para ver los resultados que lo impulsan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ TAB 2: GRUPOS ══ -->
+  <div class="tab-panel" id="panel-groups">
+    <p class="sec-hint">Cada grupo tiene un peso diferente. Expande para ver sus resultados prioritarios.</p>
+    <div class="groups-grid" id="groups-grid"></div>
+  </div>
+
+  <!-- ══ TAB 3: OUTCOMES ══ -->
+  <div class="tab-panel" id="panel-outcomes">
+    <p class="sec-hint">Mayor relevancia arriba — el resultado más valorado aparece primero.</p>
+    <div class="outcomes-wrap">
+      <div style="position:relative">
+        <div class="outcomes-col" id="outcomes-col"></div>
+        <div style="display:flex; justify-content:space-between; padding: 8px 14px 0; font-size:10.5px; color:var(--dim); font-weight:500">
+          <span>↑ Menor relevancia</span>
+          <span>Mayor relevancia ↑</span>
+        </div>
+      </div>
+      <div class="outcomes-aside">
+        <div class="aside-box">
+          <div class="aside-title">Lectura del mapa</div>
+          <div class="reading-guide">
+            <div class="rg-row"><div class="rg-dot" style="background:var(--accent)"></div>Alta relevancia (≥ 4%)</div>
+            <div class="rg-row"><div class="rg-dot" style="background:var(--blue)"></div>Media (1.5 – 4%)</div>
+            <div class="rg-row"><div class="rg-dot" style="background:var(--border2)"></div>Baja (menor a 1.5%)</div>
+          </div>
+          <hr class="aside-divider">
+          <div class="aside-stat">
+            <div class="aside-stat-val">10</div>
+            <div class="aside-stat-label">Outcomes de alta relevancia (≥ 4%)</div>
+          </div>
+          <div class="aside-stat">
+            <div class="aside-stat-val">12</div>
+            <div class="aside-stat-label">Outcomes de relevancia media</div>
+          </div>
+          <div class="aside-stat" style="margin-bottom:0">
+            <div class="aside-stat-val" style="color:var(--dim)">8</div>
+            <div class="aside-stat-label">Outcomes de baja relevancia</div>
+          </div>
+        </div>
+        <div class="aside-box">
+          <div class="aside-title">Top 3 outcomes</div>
+          <div id="top3-aside"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+const SERVICES = [{"rank":1,"id":"Methodologies and Frameworks Management","name":"Gestión de metodologías y marcos","score":7.11,"drivers":[{"oid":27,"name":"Pronóstico de proyectos más preciso","contrib":26.396},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":25.076},{"oid":4,"name":"Mejor definición de roles y responsabilidades","contrib":17.868}]},{"rank":2,"id":"Performance Management","name":"Gestión del desempeño","score":6.19,"drivers":[{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":25.076},{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":22.335},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":20.711}]},{"rank":3,"id":"Risk Management","name":"Gestión de riesgos","score":5.92,"drivers":[{"oid":27,"name":"Pronóstico de proyectos más preciso","contrib":35.195},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":16.717},{"oid":28,"name":"Reducción de la exposición al riesgo","contrib":12.318}]},{"rank":4,"id":"Specialized Services","name":"Servicios especializados","score":5.86,"drivers":[{"oid":27,"name":"Pronóstico de proyectos más preciso","contrib":35.195},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":25.076},{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":22.335}]},{"rank":5,"id":"Project Management","name":"Gestión de proyectos","score":5.80,"drivers":[{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":22.335},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":16.717},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":15.533}]},{"rank":6,"id":"Resource Management","name":"Gestión de recursos","score":5.72,"drivers":[{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":20.508},{"oid":30,"name":"Reducción del ciclo de vida del proyecto","contrib":19.492},{"oid":11,"name":"Mejor gestión de recursos","contrib":18.274}]},{"rank":7,"id":"Project Support Services","name":"Servicios de soporte a proyectos","score":5.18,"drivers":[{"oid":27,"name":"Pronóstico de proyectos más preciso","contrib":35.195},{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":22.335},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":15.533}]},{"rank":8,"id":"Systems and Tools Management","name":"Gestión de sistemas y herramientas","score":4.54,"drivers":[{"oid":27,"name":"Pronóstico de proyectos más preciso","contrib":17.597},{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":11.168},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":10.355}]},{"rank":9,"id":"Training and Development","name":"Formación y desarrollo","score":4.26,"drivers":[{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":27.343},{"oid":7,"name":"Mejor gestión del talento","contrib":20.575},{"oid":24,"name":"Aumento del aprendizaje organizacional","contrib":15.973}]},{"rank":10,"id":"Data Analytics and Reporting","name":"Análisis de datos e informes","score":4.21,"drivers":[{"oid":27,"name":"Pronóstico de proyectos más preciso","contrib":35.195},{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":22.335},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":20.711}]},{"rank":11,"id":"Governance Oversight","name":"Supervisión de gobernanza","score":3.71,"drivers":[{"oid":4,"name":"Mejor definición de roles y responsabilidades","contrib":17.868},{"oid":28,"name":"Reducción de la exposición al riesgo","contrib":12.318},{"oid":14,"name":"Mayor retorno de la inversión (ROI)","contrib":12.183}]},{"rank":12,"id":"Knowledge Management","name":"Gestión del conocimiento","score":3.68,"drivers":[{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":16.717},{"oid":24,"name":"Aumento del aprendizaje organizacional","contrib":15.973},{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":13.672}]},{"rank":13,"id":"Program Management","name":"Gestión de programas","score":3.55,"drivers":[{"oid":14,"name":"Mayor retorno de la inversión (ROI)","contrib":24.365},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":15.533},{"oid":21,"name":"Mejora de las tasas de éxito","contrib":8.122}]},{"rank":14,"id":"Issue Management","name":"Gestión de problemas","score":3.51,"drivers":[{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":16.751},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":16.717},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":15.533}]},{"rank":15,"id":"Portfolio Management","name":"Gestión de portafolio","score":3.42,"drivers":[{"oid":14,"name":"Mayor retorno de la inversión (ROI)","contrib":24.365},{"oid":5,"name":"Mejor priorización de proyectos","contrib":15.702},{"oid":11,"name":"Mejor gestión de recursos","contrib":13.706}]},{"rank":16,"id":"Mentoring and Coaching","name":"Mentoría y coaching","score":3.40,"drivers":[{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":27.343},{"oid":7,"name":"Mejor gestión del talento","contrib":20.575},{"oid":24,"name":"Aumento del aprendizaje organizacional","contrib":15.973}]},{"rank":17,"id":"Stakeholder Management","name":"Gestión de interesados","score":3.17,"drivers":[{"oid":10,"name":"Mejora en la experiencia del cliente del proyecto","contrib":14.213},{"oid":2,"name":"Mejor gestión del cambio organizacional","contrib":12.86},{"oid":23,"name":"Mejora del involucramiento de interesados","contrib":10.558}]},{"rank":18,"id":"Change Control Management","name":"Gestión del control de cambios","score":3.12,"drivers":[{"oid":18,"name":"Mejora en la gestión del presupuesto","contrib":16.751},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":16.717},{"oid":11,"name":"Mejor gestión de recursos","contrib":13.706}]},{"rank":19,"id":"Audit Assessments","name":"Evaluaciones y auditorías","score":2.87,"drivers":[{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":33.435},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":15.533},{"oid":24,"name":"Aumento del aprendizaje organizacional","contrib":11.98}]},{"rank":20,"id":"Foster Project Culture","name":"Fomento de cultura de proyectos","score":2.75,"drivers":[{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":13.672},{"oid":7,"name":"Mejor gestión del talento","contrib":10.288},{"oid":16,"name":"Mejora de la colaboración y comunicación","contrib":10.152}]},{"rank":21,"id":"Benefit Realization Management","name":"Gestión de realización de beneficios","score":2.54,"drivers":[{"oid":14,"name":"Mayor retorno de la inversión (ROI)","contrib":24.365},{"oid":5,"name":"Mejor priorización de proyectos","contrib":11.777},{"oid":20,"name":"Mejora de la gestión del rendimiento","contrib":10.355}]},{"rank":22,"id":"Quality Assurance","name":"Aseguramiento de la calidad","score":2.09,"drivers":[{"oid":6,"name":"Mejor calidad de los resultados del proyecto","contrib":33.435},{"oid":10,"name":"Mejora en la experiencia del cliente del proyecto","contrib":10.66},{"oid":21,"name":"Mejora de las tasas de éxito","contrib":4.061}]},{"rank":23,"id":"Advice to Executive Level","name":"Asesoría al nivel ejecutivo","score":1.99,"drivers":[{"oid":5,"name":"Mejor priorización de proyectos","contrib":15.702},{"oid":9,"name":"Mejor toma de decisiones","contrib":8.122},{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":6.836}]},{"rank":24,"id":"Strategic Planning Support","name":"Apoyo a planificación estratégica","score":1.98,"drivers":[{"oid":5,"name":"Mejor priorización de proyectos","contrib":15.702},{"oid":14,"name":"Mayor retorno de la inversión (ROI)","contrib":12.183},{"oid":12,"name":"Mayor alineación con objetivos estratégicos","contrib":8.528}]},{"rank":25,"id":"Organizational Change Management","name":"Gestión del cambio organizacional","score":1.76,"drivers":[{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","contrib":13.672},{"oid":2,"name":"Mejor gestión del cambio organizacional","contrib":12.86},{"oid":23,"name":"Mejora del involucramiento de interesados","contrib":7.919}]},{"rank":26,"id":"Customer Relationship Management","name":"Gestión de relaciones con el cliente","score":1.66,"drivers":[{"oid":10,"name":"Mejora en la experiencia del cliente del proyecto","contrib":14.213},{"oid":23,"name":"Mejora del involucramiento de interesados","contrib":10.558},{"oid":19,"name":"Mejora en la relación con clientes de proyecto","contrib":7.31}]}];
+
+const OUTCOMES = [{"rank":1,"id":27,"name":"Pronóstico de proyectos más preciso","score":8.80},{"rank":2,"id":6,"name":"Mejor calidad de los resultados del proyecto","score":8.36},{"rank":3,"id":1,"name":"Mayor disponibilidad de recursos cualificados","score":6.84},{"rank":4,"id":14,"name":"Mayor retorno de la inversión (ROI)","score":6.09},{"rank":5,"id":18,"name":"Mejora en la gestión del presupuesto","score":5.58},{"rank":6,"id":20,"name":"Mejora de la gestión del rendimiento","score":5.18},{"rank":7,"id":7,"name":"Mejor gestión del talento","score":5.14},{"rank":8,"id":30,"name":"Reducción del ciclo de vida del proyecto","score":4.87},{"rank":9,"id":11,"name":"Mejor gestión de recursos","score":4.57},{"rank":10,"id":4,"name":"Mejor definición de roles y responsabilidades","score":4.47},{"rank":11,"id":24,"name":"Aumento del aprendizaje organizacional","score":3.99},{"rank":12,"id":5,"name":"Mejor priorización de proyectos","score":3.93},{"rank":13,"id":10,"name":"Mejora en la experiencia del cliente del proyecto","score":3.55},{"rank":14,"id":2,"name":"Mejor gestión del cambio organizacional","score":3.21},{"rank":15,"id":28,"name":"Reducción de la exposición al riesgo","score":3.08},{"rank":16,"id":23,"name":"Mejora del involucramiento de interesados","score":2.64},{"rank":17,"id":16,"name":"Mejora de la colaboración y comunicación","score":2.54},{"rank":18,"id":25,"name":"Mayor productividad en proyectos","score":2.23},{"rank":19,"id":12,"name":"Mayor alineación con objetivos estratégicos","score":2.13},{"rank":20,"id":9,"name":"Mejor toma de decisiones","score":2.03},{"rank":21,"id":21,"name":"Mejora de las tasas de éxito","score":2.03},{"rank":22,"id":19,"name":"Mejora en la relación con clientes de proyecto","score":1.83},{"rank":23,"id":3,"name":"Mejor control de equipos de proyecto","score":1.52},{"rank":24,"id":17,"name":"Mayor compromiso organizacional con resultados","score":1.52},{"rank":25,"id":13,"name":"Mayor integración entre áreas organizacionales","score":1.22},{"rank":26,"id":26,"name":"Mayor visibilidad del progreso del proyecto","score":0.98},{"rank":27,"id":8,"name":"Transferencia eficaz del conocimiento","score":0.88},{"rank":28,"id":15,"name":"Mayor disponibilidad de información","score":0.47},{"rank":29,"id":29,"name":"Gobernanza y cumplimiento más estrictos","score":0.30},{"rank":30,"id":22,"name":"Mayor confiabilidad de la información","score":0.00}];
+
+const GROUPS = [{"name":"C-level (directiva)","weight":30,"n":5,"top_outcomes":[{"oid":14,"name":"Mayor retorno de la inversión (ROI)","score":14.7},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","score":12.0},{"oid":18,"name":"Mejora en la gestión del presupuesto","score":10.7},{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","score":9.3},{"oid":10,"name":"Mejora en la experiencia del cliente del proyecto","score":9.3}]},{"name":"Gerentes y coordinadores","weight":30,"n":4,"top_outcomes":[{"oid":27,"name":"Pronóstico de proyectos más preciso","score":18.3},{"oid":24,"name":"Aumento del aprendizaje organizacional","score":11.7},{"oid":5,"name":"Mejor priorización de proyectos","score":8.3},{"oid":20,"name":"Mejora de la gestión del rendimiento","score":8.3},{"oid":30,"name":"Reducción del ciclo de vida del proyecto","score":8.3}]},{"name":"Tech leads","weight":10,"n":6,"top_outcomes":[{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","score":15.6},{"oid":4,"name":"Mejor definición de roles y responsabilidades","score":14.4},{"oid":2,"name":"Mejor gestión del cambio organizacional","score":13.3},{"oid":7,"name":"Mejor gestión del talento","score":12.2},{"oid":11,"name":"Mejor gestión de recursos","score":10.0}]},{"name":"Product manager","weight":10,"n":2,"top_outcomes":[{"oid":16,"name":"Mejora de la colaboración y comunicación","score":30.0},{"oid":6,"name":"Mejor calidad de los resultados del proyecto","score":26.7},{"oid":4,"name":"Mejor definición de roles y responsabilidades","score":20.0},{"oid":5,"name":"Mejor priorización de proyectos","score":10.0},{"oid":7,"name":"Mejor gestión del talento","score":6.7}]},{"name":"Quality assurance (QA)","weight":6,"n":2,"top_outcomes":[{"oid":12,"name":"Mayor alineación con objetivos estratégicos","score":20.0},{"oid":2,"name":"Mejor gestión del cambio organizacional","score":16.7},{"oid":4,"name":"Mejor definición de roles y responsabilidades","score":16.7},{"oid":7,"name":"Mejor gestión del talento","score":13.3},{"oid":11,"name":"Mejor gestión de recursos","score":13.3}]},{"name":"Desarrolladores","weight":6,"n":4,"top_outcomes":[{"oid":20,"name":"Mejora de la gestión del rendimiento","score":18.3},{"oid":19,"name":"Mejora en la relación con clientes de proyecto","score":13.3},{"oid":23,"name":"Mejora del involucramiento de interesados","score":13.3},{"oid":5,"name":"Mejor priorización de proyectos","score":8.3},{"oid":17,"name":"Mayor compromiso organizacional con resultados","score":8.3}]},{"name":"Product designers","weight":6,"n":1,"top_outcomes":[{"oid":4,"name":"Mejor definición de roles y responsabilidades","score":33.3},{"oid":1,"name":"Mayor disponibilidad de recursos cualificados","score":26.7},{"oid":23,"name":"Mejora del involucramiento de interesados","score":20.0},{"oid":28,"name":"Reducción de la exposición al riesgo","score":13.3},{"oid":30,"name":"Reducción del ciclo de vida del proyecto","score":6.7}]},{"name":"Talent Acquisition & Development","weight":2,"n":1,"top_outcomes":[{"oid":16,"name":"Mejora de la colaboración y comunicación","score":33.3},{"oid":4,"name":"Mejor definición de roles y responsabilidades","score":26.7},{"oid":15,"name":"Mayor disponibilidad de información","score":20.0},{"oid":26,"name":"Mayor visibilidad del progreso del proyecto","score":13.3},{"oid":8,"name":"Transferencia eficaz del conocimiento","score":6.7}]}];
+
+const GROUP_CFG = {
+  "Gerentes y coordinadores":         {e:"🎯", c:"#1A5C3A", bg:"#EBF5EF"},
+  "C-level (directiva)":              {e:"♟",  c:"#92400E", bg:"#FEF3C7"},
+  "Tech leads":                       {e:"⚙️", c:"#1E3A8A", bg:"#EEF2FF"},
+  "Product manager":                  {e:"📋", c:"#6B21A8", bg:"#F5F3FF"},
+  "Quality assurance (QA)":           {e:"🔍", c:"#065F46", bg:"#ECFDF5"},
+  "Desarrolladores":                  {e:"💻", c:"#9A3412", bg:"#FFF7ED"},
+  "Product designers":                {e:"🎨", c:"#9D174D", bg:"#FFF1F2"},
+  "Talent Acquisition & Development": {e:"🌱", c:"#166534", bg:"#F0FDF4"},
+};
+
+const MAX_SVC = SERVICES[0].score;
+const MAX_OUT = OUTCOMES[0].score;
+
+// ── services ──────────────────────────────────────────────
+function buildConcRows() {
+  const tiers = [
+    {l:"Top 5",  s:SERVICES.slice(0,5),  c:"var(--accent)"},
+    {l:"Top 10", s:SERVICES.slice(0,10), c:"var(--blue)"},
+    {l:"Top 15", s:SERVICES.slice(0,15), c:"#7C7870"},
+    {l:"Todos",  s:SERVICES,              c:"var(--border2)"},
+  ];
+  return tiers.map(t => {
+    const sum = t.s.reduce((a,s)=>a+s.score,0);
+    const w   = (sum / 100 * 100).toFixed(0);
+    return `<div class="conc-row">
+      <span class="conc-tier">${t.l}</span>
+      <div class="conc-bar"><div class="conc-fill" style="width:${w}%;background:${t.c}"></div></div>
+      <span class="conc-pct">${sum.toFixed(1)}%</span>
+    </div>`;
+  }).join('');
+}
+
+function renderServices() {
+  const list = document.getElementById('svc-list');
+  list.innerHTML = '';
+
+  SERVICES.forEach(svc => {
+    const tc  = svc.rank<=5 ? 't5' : svc.rank<=10 ? 't10' : 'rest';
+    const chip = svc.rank<=5
+      ? '<span class="chip chip-t5">Top 5</span>'
+      : svc.rank<=10 ? '<span class="chip chip-t10">Top 10</span>' : '';
+    const barW = (svc.score / MAX_SVC * 100).toFixed(1);
+    const drvHtml = svc.drivers.map(d => {
+      const w = (d.contrib / svc.drivers[0].contrib * 100).toFixed(0);
+      return `<div class="drv-item">
+        <div class="drv-name">${d.name}</div>
+        <div class="drv-right">
+          <div class="drv-track"><div class="drv-fill" style="width:${w}%"></div></div>
+          <div class="drv-pct">${d.contrib.toFixed(1)}%</div>
+        </div>
+      </div>`;
+    }).join('');
+
+    const el = document.createElement('div');
+    el.className = `svc-row ${tc} fade`;
+    el.innerHTML = `
+      <div class="svc-row-head">
+        <div class="svc-rank">${svc.rank}</div>
+        <div class="svc-info">
+          <div class="svc-name">${svc.name}${chip}</div>
+          <div class="track"><div class="fill" data-w="${barW}"></div></div>
+        </div>
+        <div class="svc-score">${svc.score.toFixed(2)}%</div>
+      </div>
+      <div class="svc-drivers">
+        <div class="drv-title">Resultados que impulsan este servicio</div>
+        ${drvHtml}
+      </div>`;
+    el.addEventListener('click', () => toggleSvc(el, svc));
+    list.appendChild(el);
+  });
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.fill').forEach(f => f.style.width = f.dataset.w + '%');
+  });
+
+  document.getElementById('conc-rows').innerHTML = buildConcRows();
+}
+
+function toggleSvc(el, svc) {
+  const was = el.classList.contains('open');
+  document.querySelectorAll('.svc-row').forEach(r => r.classList.remove('open'));
+  if (!was) {
+    el.classList.add('open');
+    updateDetail(svc);
+  } else {
+    resetDetail();
+  }
+}
+
+function updateDetail(svc) {
+  const drvRows = svc.drivers.map((d,i) => `
+    <div class="drv-panel-item">
+      <div class="drv-panel-name"><span style="color:var(--dim);font-size:10px;margin-right:5px">${i+1}.</span>${d.name}</div>
+      <div class="drv-panel-score">${d.contrib.toFixed(1)}%</div>
+    </div>`).join('');
+
+  document.getElementById('detail-body').innerHTML = `
+    <div id="conc-rows">${buildConcRows()}</div>
+    <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border)">
+      <div class="detail-box-eyebrow" style="margin-bottom:6px">Servicio seleccionado</div>
+      <div class="sel-service-name">${svc.name}</div>
+      <div class="sel-service-meta">Score: <strong>${svc.score.toFixed(2)}%</strong> · Posición #${svc.rank} de 26</div>
+      <div class="drv-list-title">Top 3 resultados impulsores</div>
+      ${drvRows}
+    </div>`;
+}
+
+function resetDetail() {
+  document.getElementById('detail-body').innerHTML = `
+    <div id="conc-rows">${buildConcRows()}</div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border)">
+      <p class="detail-empty">Selecciona un servicio para ver los resultados que lo impulsan</p>
+    </div>`;
+}
+
+// ── groups ────────────────────────────────────────────────
+function renderGroups() {
+  const grid = document.getElementById('groups-grid');
+  grid.innerHTML = '';
+  GROUPS.forEach(g => {
+    const cfg = GROUP_CFG[g.name] || {e:'👥', c:'#1A5C3A', bg:'#EBF5EF'};
+    const barW = (g.weight / 30 * 100).toFixed(0);
+    const ocRows = g.top_outcomes.map((o,i) => `
+      <div class="oc-row">
+        <div class="oc-num">${i+1}</div>
+        <div class="oc-name">${o.name}</div>
+        <div class="oc-score">${o.score.toFixed(1)}%</div>
+      </div>`).join('');
+
+    const el = document.createElement('div');
+    el.className = `group-card fade${g.weight === 0 ? '' : ''}`;
+    if (g.weight === 0) el.classList.add('faded');
+    el.innerHTML = `
+      <div class="gc-top">
+        <div class="gc-icon" style="background:${cfg.bg}">${cfg.e}</div>
+        <div class="gc-info">
+          <div class="gc-name">${g.name}</div>
+          <div class="gc-badges">
+            <span class="gc-weight" style="background:${cfg.bg};color:${cfg.c}">${g.weight}%</span>
+            <span class="gc-n">${g.n} persona${g.n!==1?'s':''}</span>
+          </div>
+        </div>
+      </div>
+      <div class="gc-bar"><div class="gc-bar-fill" data-w="${barW}" style="background:${cfg.c}"></div></div>
+      <div class="gc-outcomes">
+        <div class="gc-outcomes-title">Resultados que priorizan</div>
+        ${ocRows}
+      </div>`;
+    el.addEventListener('click', () => {
+      const anyOpen = document.querySelector('.group-card.open');
+      if (anyOpen) {
+        document.querySelectorAll('.group-card').forEach(c => c.classList.remove('open'));
+      } else {
+        document.querySelectorAll('.group-card').forEach(c => c.classList.add('open'));
+      }
+    });
+    grid.appendChild(el);
+  });
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.gc-bar-fill').forEach(b => b.style.width = b.dataset.w + '%');
+  });
+}
+
+// ── outcomes (bottom → top) ───────────────────────────────
+function renderOutcomes() {
+  const col = document.getElementById('outcomes-col');
+  col.innerHTML = '';
+
+  OUTCOMES.forEach(o => {
+    const tier = o.score >= 4 ? 'hi' : o.score >= 1.5 ? 'md' : 'lo';
+    const barW = (o.score / MAX_OUT * 100).toFixed(1);
+    const barColor = tier === 'hi' ? 'var(--accent)' : tier === 'md' ? 'var(--blue)' : 'var(--dim)';
+    const el = document.createElement('div');
+    el.className = `oc-card ${tier} fade`;
+    el.innerHTML = `
+      <div class="oc-card-rank">${o.rank}</div>
+      <div class="oc-info">
+        <div class="oc-card-name">${o.name}</div>
+        <div class="track"><div class="fill" data-w="${barW}" style="background:${barColor}"></div></div>
+      </div>
+      <div class="oc-score-val">${o.score > 0 ? o.score.toFixed(2)+'%' : '—'}</div>`;
+    col.appendChild(el);
+  });
+
+  requestAnimationFrame(() => {
+    document.querySelectorAll('#outcomes-col .fill').forEach(f => f.style.width = f.dataset.w + '%');
+  });
+
+  // top 3 sidebar
+  const t3 = document.getElementById('top3-aside');
+  t3.innerHTML = OUTCOMES.slice(0,3).map((o,i) => `
+    <div style="padding:7px 0;${i<2?'border-bottom:1px solid var(--border)':''}">
+      <div style="font-size:10px;font-weight:600;color:var(--dim);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:3px">#${o.rank}</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.35;margin-bottom:3px">${o.name}</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:var(--accent)">${o.score.toFixed(2)}%</div>
+    </div>`).join('');
+}
+
+// ── tabs ──────────────────────────────────────────────────
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// ── init ──────────────────────────────────────────────────
+renderServices();
+renderGroups();
+renderOutcomes();
+</script>
+</body>
+</html>
